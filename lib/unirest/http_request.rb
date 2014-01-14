@@ -34,6 +34,16 @@ module Unirest
     attr_reader :body
     attr_reader :auth
     
+    # Internal?: Creates a key-value pair from the arguments while adding them to the headers hash. The method is called when creating a header for an HTTP internal request in the HttpClient class.
+
+    # name     - The -- that serves as the hash key 
+    # value    - The -- that serves as the value to said key
+    # @headers - The Instance Variable that contains the information to be passed to the server
+
+    # Examples
+
+    #   add_header("Accept," "application/json")  
+
     def add_header(name, value)
       @headers[name] = value
     end
